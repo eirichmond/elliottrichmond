@@ -23,15 +23,32 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'twentynineteen' ); ?></a>
 	
+<!--
 		<div class="trigger-container">
 			<div class="trigger-inner">
 				<div class="eblock top"></div>
 				<div class="eblock middle"></div>
 				<div class="eblock bottom"></div>
-<!-- 				<div class="backing"></div> -->
 				<div class="circle"></div>
 				<div class="leg"></div>
 			</div>
+		</div>
+-->
+
+		<div class="triggerb-container">
+
+			<div class="leg"></div>
+
+			<div class="eblock one"></div>
+			<div class="eblock two"></div>
+			<div class="eblock three"></div>
+			<div class="eblock four"></div>
+			<div class="eblock five"></div>
+
+			<div class="innercircle"></div>
+			
+			<div class="circle"></div>
+			
 		</div>
 
 		<header id="masthead" class="<?php echo is_singular() && twentynineteen_can_show_post_thumbnail() ? 'site-header featured-image' : 'site-header'; ?>">

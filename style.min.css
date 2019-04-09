@@ -1,0 +1,16 @@
+.triggerb-container{width:100px;height:100px;position:relative;margin:0 calc(10% + 60px);top:20px}
+.triggerb-container .leg{width:30px;height:20px;position:absolute;background:white;z-index:30;bottom:10px;right:10px;-webkit-transform:rotate(45deg);transform:rotate(45deg);-webkit-transition:all .3s ease-in-out;transition:all .3s ease-in-out}
+.triggerb-container .eblock{height:20px;width:50px;position:absolute;z-index:100}
+.triggerb-container .eblock.one{background:black;-webkit-transition:all .3s ease-in-out;transition:all .3s ease-in-out;z-index:200}
+.triggerb-container .eblock.two{background:white;top:20px;-webkit-transition:all .3s ease-in-out;transition:all .3s ease-in-out}
+.triggerb-container .eblock.three{background:black;border-top-right-radius:10px;border-bottom-right-radius:10px;width:60px;top:40px;-webkit-transition:all .3s ease-in-out;transition:all .3s ease-in-out}
+.triggerb-container .eblock.four{background:white;top:60px;-webkit-transition:all .3s ease-in-out;transition:all .3s ease-in-out}
+.triggerb-container .eblock.five{background:black;top:80px;-webkit-transition:all .3s ease-in-out;transition:all .3s ease-in-out;z-index:200}
+.triggerb-container .innercircle{position:absolute;width:60px;height:60px;border-radius:30px;border:solid white 20px;top:50%;left:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);z-index:10}
+.triggerb-container .circle{position:absolute;width:100px;height:100px;border-radius:50px;border:solid black 20px;-webkit-transition:all .3s ease-in-out;transition:all .3s ease-in-out}
+.triggerb-container.active .circle,.triggerb-container.active .leg{opacity:0}
+.triggerb-container.active .eblock.two,.triggerb-container.active .eblock.three,.triggerb-container.active .eblock.four{opacity:0}
+.triggerb-container.active .eblock.one{width:90px;-webkit-transform:scale(0.6) rotate(45deg) translateX(60px);transform:scale(0.6) rotate(45deg) translateX(60px);-webkit-transform-origin:10px;transform-origin:10px}
+.triggerb-container.active .eblock.five{width:90px;-webkit-transform:scale(0.6) rotate(-45deg) translateX(60px);transform:scale(0.6) rotate(-45deg) translateX(60px);-webkit-transform-origin:10px;transform-origin:10px}
+.triggerb-container.active.remove .eblock.one,.triggerb-container.active.remove .eblock.five{width:50px;-webkit-transform:inherit;transform:inherit;-webkit-transform-origin:inherit;transform-origin:inherit}
+.triggerb-container.active.remove .eblock.two,.triggerb-container.active.remove .eblock.three,.triggerb-container.active.remove .eblock.four{opacity:1}
