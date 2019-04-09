@@ -1,0 +1,2 @@
+# elliottrichmond
+my blog
