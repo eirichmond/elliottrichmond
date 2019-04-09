@@ -1,4 +1,4 @@
-.triggerb-container{width:100px;height:100px;position:relative;margin:0 calc(10% + 60px);top:20px}
+.triggerb-container{width:100px;height:100px;position:relative;cursor:pointer}
 .triggerb-container .leg{width:30px;height:20px;position:absolute;background:white;z-index:30;bottom:10px;right:10px;-webkit-transform:rotate(45deg);transform:rotate(45deg);-webkit-transition:all .3s ease-in-out;transition:all .3s ease-in-out}
 .triggerb-container .eblock{height:20px;width:50px;position:absolute;z-index:100}
 .triggerb-container .eblock.one{background:black;-webkit-transition:all .3s ease-in-out;transition:all .3s ease-in-out;z-index:200}
@@ -14,3 +14,15 @@
 .triggerb-container.active .eblock.five{width:90px;-webkit-transform:scale(0.6) rotate(-45deg) translateX(60px);transform:scale(0.6) rotate(-45deg) translateX(60px);-webkit-transform-origin:10px;transform-origin:10px}
 .triggerb-container.active.remove .eblock.one,.triggerb-container.active.remove .eblock.five{width:50px;-webkit-transform:inherit;transform:inherit;-webkit-transform-origin:inherit;transform-origin:inherit}
 .triggerb-container.active.remove .eblock.two,.triggerb-container.active.remove .eblock.three,.triggerb-container.active.remove .eblock.four{opacity:1}
+.er-overlay{background:transparent;position:absolute;width:100%;height:100%;top:0;left:0;z-index:1;-webkit-transition:all .3s ease-in-out;transition:all .3s ease-in-out}
+.er-overlay.active{background:black}
+#openpanel{-webkit-transform:translateY(20px);transform:translateY(20px);opacity:0;-webkit-transition:all .3s ease-in-out;transition:all .3s ease-in-out;position:absolute;z-index:1;width:100%}
+#openpanel.active{opacity:1;-webkit-transform:translateY(0);transform:translateY(0)}
+#openpanel .site-title a{color:#fff;display:block;text-align:center}
+#openpanel .site-description{display:block;text-align:center;margin-top:10px}
+#openpanel .site-title:not(:empty)+.site-description:not(:empty):before{content:""}
+.main-navigation .main-menu{display:inline;text-align:center;width:100%}
+.main-navigation .main-menu li{list-style:none;margin:0;padding:0}
+.main-navigation .main-menu li a{margin:0;padding:10px;display:block}
+.entry .entry-header{margin-top:0}
+.social-navigation ul.social-links-menu li a{color:#9e9e9e}

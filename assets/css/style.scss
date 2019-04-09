@@ -12,107 +12,74 @@ Text Domain: twentynineteen
 Tags: one-column, flexible-header, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, rtl-language-support, sticky-post, threaded-comments, translation-ready
 */
 
-.triggerb-container {
-	width: 100px;
-	height: 100px;
-	position: relative;
-    margin: 0 calc(10% + 60px);
-    top: 20px;
-    	.leg {
-		width: 30px;
-		height: 20px;
-		position: absolute;
-		background: white;
-		z-index: 30;
-		bottom: 10px;
-		right: 10px;
-		transform: rotate(45deg);
-		transition: all .3s ease-in-out;
+@import 'logo';
+
+.er-overlay {
+    background: transparent;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition:all .3s ease-in-out;
+}
+
+.er-overlay.active{
+    background:black;
+}
+
+#openpanel {
+	transform:translateY(20px);
+	opacity: 0;
+	transition: all .3s ease-in-out;
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	&.active {
+		opacity: 1;
+		transform:translateY(0);
 	}
-	.eblock {
-	    height: 20px;
-	    width: 50px;
-	    position: absolute;
-	    z-index: 100;
-    		&.one {
-	    		background: black;
-	    		transition: all .3s ease-in-out;
-	    		z-index: 200;
-    		}
-    		&.two {
-	    		background: white;
-	    		top:20px;
-	    		transition: all .3s ease-in-out;
-    		}
-    		&.three {
-	    		background: black;
-	    		border-top-right-radius: 10px;
-	    		border-bottom-right-radius: 10px;
-	    		width: 60px;
-	    		top:40px;
-	    		transition: all .3s ease-in-out;
-    		}
-    		&.four {
-	    		background: white;
-	    		top:60px;
-	    		transition: all .3s ease-in-out;
-    		}
-    		&.five {
-	    		background: black;
- 	    		top:80px;
- 	    		transition: all .3s ease-in-out;
-	    		z-index: 200;
-   		}
+	.site-title a {
+	    color: #fff;
+	    display: block;
+	    text-align: center;
 	}
-	.innercircle {
-	    position: absolute;
-	    width: 60px;
-	    height: 60px;
-	    border-radius: 30px;
-	    border: solid white 20px;
-	    top: 50%;
-	    left: 50%;
-	    transform: translate(-50%, -50%);
-	    z-index: 10;
-    	}
-	.circle {
-	    position: absolute;
-	    width: 100px;
-	    height: 100px;
-	    border-radius: 50px;
-	    border: solid black 20px;
-	    transition: all .3s ease-in-out;
-   	}
-   	&.active {
-	   	.circle, .leg {
-		   	opacity: 0;
-	   	}
-	   	.eblock {
-		   	&.two, &.three, &.four, {
-			   	opacity: 0;
-		   	}
-		   	&.one {
-			   	width:90px;
-			   	transform: scale(.6) rotate(45deg) translateX(60px);
-			   	transform-origin: 10px;
-		   	}
-		   	&.five {
-			   	width:90px;
-			   	transform: scale(.6) rotate(-45deg) translateX(60px);
-			   	transform-origin: 10px;
-		   	}
-	   	}
-	   	&.remove {
-		   	.eblock {
-			   	&.one, &.five {
-				   	width:50px;
-				   	transform: inherit;
-				   	transform-origin: inherit;
-			   	}
-			   	&.two, &.three, &.four {
-				   	opacity: 1;
-			   	}
-		   	}
-	   	}
-   	}
+	
+	.site-description {
+	    display: block;
+	    text-align: center;
+        margin-top: 10px;
+	}
+	.site-title:not(:empty) + .site-description:not(:empty):before {
+	    content: "";
+	}
+}
+
+/** while I hack **/
+
+.main-navigation .main-menu {
+    display: inline;
+    text-align: center;
+    width: 100%;
+}
+
+.main-navigation .main-menu li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-navigation .main-menu li a {
+    margin: 0;
+    padding: 10px;
+    display: block;
+}
+
+.entry .entry-header {
+    margin-top: 0;
+}
+
+.social-navigation ul.social-links-menu li a {
+    color: #9E9E9E;
 }
