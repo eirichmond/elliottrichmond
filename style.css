@@ -1,0 +1,109 @@
+/*
+Theme Name:   Twenty Nineteen Child
+Theme URI:    https://elliottrichmond.co.uk/
+Description:  Custom 2019 theme 
+Author:       Elliott Richmond
+Author URI:   https://elliottrichmond.co.uk/
+Template:     twentynineteen
+Version:      1.0.0
+License:      GNU General Public License v2 or later
+License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: twentynineteen
+Tags: one-column, flexible-header, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, rtl-language-support, sticky-post, threaded-comments, translation-ready
+*/
+
+.trigger-container {
+    position: relative;
+    left: 20px;
+    margin: 20px 0 0 0;
+}
+
+.trigger-container .trigger-inner {
+    position: relative;
+    width: 70px;
+    height: 70px;
+}
+
+.trigger-container .trigger-inner .eblock {
+    width: 30px;
+    height: 20px;
+    background: #fff;
+    margin-bottom: 10px;
+    position: absolute;
+    z-index: 100;
+    transition: all .3s ease-in-out;
+}
+
+.trigger-container .trigger-inner .top {
+	top: 0;
+}
+
+.trigger-container .trigger-inner .middle {
+    top: 27px;
+}
+
+.trigger-container .trigger-inner .bottom {
+    top: 53px;
+}
+
+.trigger-container .trigger-inner .backing {
+    background: #000;
+    width: 34px;
+    height: 100%;
+    position: absolute;
+}
+
+.trigger-container .trigger-inner .circle {
+    background: #000;
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    position: absolute;
+    z-index: 0;
+    transition: all .3s ease-in-out;
+}
+
+.trigger-container .trigger-inner .leg {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #000;
+    z-index: 200;
+    transform: rotate(45deg);
+    bottom: 0px;
+    right: 5px;
+    transform: skewX(50deg);
+    transition: all .3s ease-in-out;
+}
+
+.trigger-container.active .trigger-inner .leg {
+	width: 0;
+	height: 0;
+}
+.trigger-container.active .trigger-inner .leg,
+.trigger-container.active .trigger-inner .circle,
+.trigger-container.active .trigger-inner .backing {
+	opacity: 0;
+}
+
+
+.trigger-container.active .trigger-inner .eblock {
+    height: 10px;
+    background: #000;
+    width: 105%;
+}
+
+.trigger-container.active .trigger-inner .top {
+	transform: rotate(45deg);
+	transform-origin: left;
+}
+
+.trigger-container.active .trigger-inner .middle {
+	opacity: 0;
+}
+
+.trigger-container.active .trigger-inner .bottom {
+	transform: rotate(-45deg);
+	transform-origin: left;
+}
+
